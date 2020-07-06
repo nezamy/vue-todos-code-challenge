@@ -14,15 +14,15 @@ Our team was already able to complete the following:
 * Add the basic app and component structure
 
 ## Mission
-- [ ] Fork this repository
-- [ ] Create a named `vuex` module to hold your todos
-- [ ] Complete the CRUD features in the GUI and make sure they are reflected in the store
-- [ ] Make sure the `todo-list` component dynamically displays the todos
-- [ ] Write concise commit messages
-- [ ] Submit a merge request and describe your changes precisely
+- [x] Fork this repository
+- [x] Create a named `vuex` module to hold your todos
+- [x] Complete the CRUD features in the GUI and make sure they are reflected in the store
+- [x] Make sure the `todo-list` component dynamically displays the todos
+- [x] Write concise commit messages
+- [x] Submit a merge request and describe your changes precisely
 
 ## Bonus
-- [ ] Add [Vuex-ORM](https://vuex-orm.github.io/vuex-orm/)
+- [x] Add [Vuex-ORM](https://vuex-orm.github.io/vuex-orm/)
 - [ ] Add [TypeScript](https://typescriptlang.org)
 - [ ] Document with [jsDoc](https://devdocs.io/jsdoc/) comments
 
@@ -63,3 +63,34 @@ npm run build
 ```
 npm run lint
 ```
+
+## Added Components
+there is three components `todo-list`, `todo-item`, `todo-form`
+
+### Todo-list
+| Props         | Type          | Description          |
+| ------------- |:-------------:| --------------------:|
+| tasks         | Array         | List of task items   |
+
+| events        | args          | Args return          |
+| ------------- |:-------------:| --------------------------:|
+| update        | task          | Updated task item `object` |
+| remove        | id            | Task item id               |
+
+### Todo-item
+| Props         | Type          | Description          |
+| ------------- |:-------------:| --------------------:|
+| id            | string        | Item id              |
+| title         | string        | Item title           |
+| completed     | bool          | If item completed    |
+
+| events        | args          | Args return          |
+| ------------- |:-------------:| --------------------------:|
+| update        | task          | Updated task item `object` |
+| remove        | id            | Task item id               |
+
+
+### Todo-form
+| events        | args          | Args return          |
+| ------------- |:-------------:| --------------------:|
+| add           | task          | `string` of new item |
